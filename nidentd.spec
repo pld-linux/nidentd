@@ -8,6 +8,7 @@ Release:	0.1
 License:	GPL
 Group:		Applications/Daemons
 Source0:	http://download.nmee.net/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	e5bac34fb35269be48cb1bc07ac2bf96
 Source1:	%{name}.inetd
 Source2:	%{name}.logrotate
 URL:		http://www.nmee.net/
