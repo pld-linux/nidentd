@@ -13,11 +13,11 @@ Source1:	%{name}.inetd
 Source2:	%{name}.logrotate
 URL:		http://www.nmee.net/
 Requires:	iptables
-Provides:       identserver
-Obsoletes:      linux-identd
-Obsoletes:      linux-identd-inetd
-Obsoletes:      linux-identd-standalone
-Obsoletes:      pidentd
+Provides:	identserver
+Obsoletes:	linux-identd
+Obsoletes:	linux-identd-inetd
+Obsoletes:	linux-identd-standalone
+Obsoletes:	pidentd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +38,7 @@ u¿ywa zmiennej $default zawartej w programie (na przyk³ad je¶li adres
 identa 'pc1').
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 
@@ -61,7 +61,7 @@ if [ -f /var/lock/subsys/rc-inetd ]; then
 else
         echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start inet server" 1>&2
 fi
- 
+
 %postun
 if [ -f /var/lock/subsys/rc-inetd ]; then
         /etc/rc.d/init.d/rc-inetd reload
