@@ -1,8 +1,10 @@
+# TODO:
+# - fix log file ownership (nobody must NOT own any files!)
 Summary:	Simple identd
 Summary(pl):	Prosty demon identa
 Name:		nidentd
 Version:	1.1
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Applications/Daemons
 Source0:	http://download.nmee.net/%{name}/%{name}-%{version}.tar.bz2
