@@ -72,5 +72,5 @@ fi
 %doc README
 %attr(640,root,root) %config(noreplace) %verify(not mtime md5 size) /etc/sysconfig/rc-inetd/nidentd
 %attr(755,root,root) %{_sbindir}/*
-%config /etc/logrotate.d/nidentd
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/logrotate.d/nidentd
 %attr(0600,nobody,root) %ghost %{_var}/log/nidentd.log
