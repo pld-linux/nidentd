@@ -1,0 +1,9 @@
+SERVICE_NAME=auth
+SOCK_TYPE=stream
+PROTOCOL=tcp
+PORT=113
+FLAGS=nowait
+USER=nobody
+SERVER=tcpd
+DAEMON=/usr/sbin/nidentd
+FAMILY=ipv4
