@@ -12,6 +12,7 @@ Source0:	http://download.nmee.net/nidentd/%{name}-%{version}.tar.bz2
 Source1:	%{name}.inetd
 Source2:	%{name}.logrotate
 URL:		http://www.nmee.net/
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	iptables
 Provides:	identserver
 Obsoletes:	linux-identd
@@ -56,15 +57,11 @@ install %{SOURCE2} $RPM_BUILD_ROOT/etc/logrotate.d/nidentd
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ -f /var/lock/subsys/rc-inetd ]; then
-	/etc/rc.d/init.d/rc-inetd reload 1>&2
-else
-	echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start inet server" 1>&2
-fi
+%service -q rc-inetd reload
 
 %postun
-if [ -f /var/lock/subsys/rc-inetd ]; then
-	/etc/rc.d/init.d/rc-inetd reload
+if [ "$1" = 0 ]; then
+	%service -q rc-inetd reload
 fi
 
 %files
