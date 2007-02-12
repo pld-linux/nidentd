@@ -1,7 +1,7 @@
 # TODO:
 # - fix log file ownership (nobody must NOT own any files!)
 Summary:	Simple identd
-Summary(pl):	Prosty demon identa
+Summary(pl.UTF-8):   Prosty demon identa
 Name:		nidentd
 Version:	1.1
 Release:	0.1
@@ -30,12 +30,12 @@ specified by the $default variable in the program (e.g. if the local
 host on the lan is 192.168.0.100, and that address resolves to
 pc1.local.lan in a reverse lookup, the ident reply will be 'pc1').
 
-%description -l pl
-Prosty demon identd napisany w Perlu z obs³ug± dla maskowanych
-po³±czeñ (u¿ywa iptables). Rozwi±zuje nazwê na maskuj±cym ho¶cie i
-u¿ywa jako identa pierwszego cz³onu nazwy hosta. Je¶li adres ip nie
-mo¿e byæ rozwi±zany, to u¿ywa zmiennej $default zawartej w programie
-(na przyk³ad je¶li adres 192.168.0.100 jest rozwi±zywany jako
+%description -l pl.UTF-8
+Prosty demon identd napisany w Perlu z obsÅ‚ugÄ… dla maskowanych
+poÅ‚Ä…czeÅ„ (uÅ¼ywa iptables). RozwiÄ…zuje nazwÄ™ na maskujÄ…cym hoÅ›cie i
+uÅ¼ywa jako identa pierwszego czÅ‚onu nazwy hosta. JeÅ›li adres ip nie
+moÅ¼e byÄ‡ rozwiÄ…zany, to uÅ¼ywa zmiennej $default zawartej w programie
+(na przykÅ‚ad jeÅ›li adres 192.168.0.100 jest rozwiÄ…zywany jako
 pc1.local.lan, to identd przydzieli identa 'pc1').
 
 %prep
