@@ -1,7 +1,7 @@
 # TODO:
 # - fix log file ownership (nobody must NOT own any files!)
 Summary:	Simple identd
-Summary(pl.UTF-8):   Prosty demon identa
+Summary(pl.UTF-8):	Prosty demon identa
 Name:		nidentd
 Version:	1.1
 Release:	0.1
